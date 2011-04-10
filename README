@@ -1,0 +1,42 @@
+Updated 1/14/06
+
+NOTE: This is a Beta version of Apex 3.0.  It is lacking the level of
+documentation, code cleanup, and general completeness we would ideally
+prefer for our open source distribution, but is provided this way for
+users who would like Apex immediately.
+
+The most up-to-date Apex documentation can be found online at:
+
+   http://apexdoc.pbwiki.com/
+
+Please see the file LICENSE for terms of the NASA Open Source Agreement
+under which this software is provided.
+
+---
+
+The contents of this directory are described as follows and represent
+the 'apex' CVS module  (e.g. 'cvs checkout apex')
+
+Apex distributions look a little different.  If this directory is
+converted into a distribution it will contain additional files and be
+missing some of those listed.  Directions for creating distributions are
+found in 'notes'.
+
+apex/
+  Makefile           (conveniences for Unix users)
+  README             (this file)
+  agreement.txt      (license agreement for users)
+  apexlib            (application libraries)
+  apexprefs          (default preferences file)
+  build-image.lisp   (builds distribution image)
+  eli/               (Emacs Lisp Interface for distributions)
+  examples/          (example applications)
+  extensions/        (user extensions to Apex)
+  hosts.cl           (logical pathname translations needed by load.lisp)
+  load.lisp          (loads Apex)
+  notes/             (developer notes)
+  patches/           (Apex patches)
+  regression-load.lisp  (load file for regression tests)
+  regression-tests      (regression test suite)
+  run-regression.sh     (regression test script)
+  system/        (source code of Apex system)

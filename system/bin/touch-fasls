@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Touch the fasl files as a fix for needing compilation
+#
+find . -name "*fasl" | xargs touch

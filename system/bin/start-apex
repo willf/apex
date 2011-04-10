@@ -1,0 +1,16 @@
+#!/bin/csh -f
+
+# Script to start Apex.  Must be run from apex/ directory.
+
+# Not using this idea yet.
+#  if (! $?APEX_HOME) then
+#    echo Your APEX_HOME environment variable is not set.
+#    echo Please set it to the full pathname of your 'apex'
+#    echo directory and try again.
+#    exit(1);
+#  endif
+
+clisp -ansi -q -M system/bin/apex.mem
+
+
+

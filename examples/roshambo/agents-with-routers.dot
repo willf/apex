@@ -1,0 +1,24 @@
+Digraph g {
+
+node [style=filled shape=ellipse];
+
+
+Vis [shape="box", color="yellow", label="Visual Router"];
+Vox [shape="box", color="yellow", label="Auditory Router"];
+
+Agent1 [color="green"];  
+Agent2 [color="green"]; 
+Agent3 [color="green"];  
+Agent4 [color="green"];
+
+Agent1 -> Vis  [dir="both"];
+Agent2  -> Vis [dir="both"];
+Agent3 -> Vis [dir="both"];
+Vox -> Agent2 [dir="back" label="hello"];
+Vox -> Agent3 [label = " hello"];
+Vox -> Agent4 [label = "hello"];
+
+
+label="";
+
+}

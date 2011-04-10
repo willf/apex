@@ -1,0 +1,3 @@
+This directory contains the Emacs Lisp Interface for Allegro Common Lisp
+6.2, unmodified from their distribution, plus the additional file
+apex.el which provides Apex-specific support.

@@ -1,0 +1,11 @@
+This directory contains Lisp patches for Apex.  A patch is a Lisp file,
+provided in source and/or compiled form.  New patches should be added to
+this directory.  Upon each new release of Apex, this directory will be
+empty -- all previously existing patches will have been rolled into the
+system.
+
+The patch files have somewhat descriptive names.  For information about
+the patches, see the FTP or Web site from where the patches were
+obtained.
+
+

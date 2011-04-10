@@ -1,0 +1,89 @@
+
+ The following license agreement (beginning below the dashed line) was
+ drafted by Franz, Inc., makers of Allegro Common Lisp (R), the Lisp
+ system upon which Apex is built.  The agreement has been included
+ verbatim in its entirety below.  Franz requires users of Apex to accept
+ this agreement, which pertains primarily to the use of the Franz
+ components of the Apex software.
+
+ U.S. Government users of Apex, please especially note item (8) and take
+ this document as an expression of the conditions mentioned.
+
+ -------------------------------------------------------------------------
+
+ End-User Restrictions
+
+ All End-User licenses of Apex with an Allegro CL Runtime or Allegro CL
+ Dynamic Runtime version incorporated therein (Allegro CL Runtime and
+ Allegro CL Dynamic Runtime versions are defined in Franz's Allegro CL
+ documentation and together are referred to as "Franz Programs" herein)
+ shall include provisions that:
+
+ (1) the End-User is granted a nontransferable, nonexclusive license to
+ use the Franz Programs only on a CPU(s) and OS type on which Apex will
+ be used exclusively (the "Defined System").  The End-User may not use
+ the Program(s) in a network or multi-user system in which more than one
+ user uses or has access to the program at any one time.
+
+ (2) Franz retains all title to the Franz Programs, and all copies
+ thereof; and no title to the Franz Programs, or any intellectual
+ property in the Franz Programs, is transferred to such End-User;
+
+ (3) the End-User may not copy the Franz Programs, except for one (1)
+ copy of the Franz Programs for backup or archival purposes only and only
+ as necessary to use the Franz Programs on the Defined System, and that
+ all such copies shall contain all copyright and other proprietary
+ notices or legends on the Franz Programs delivered to the End-User;
+
+ (4) the End-User agrees not to reverse assemble, decompile, or otherwise
+ attempt to derive source code from the Franz Programs;
+
+ (5) the End-User agrees to comply with all export and re-export
+ restrictions and regulations of the Department of Commerce or other
+ United States agency or authority, and not to transfer, or authorize the
+ transfer, of any Franz Programs to a prohibited country or otherwise in
+ violation of any such restrictions or regulations;
+
+ (6) Franz shall not be liable to the End-User for any general, special,
+ direct, indirect, consequential, incidental, or other damages arising
+ out of the Sublicense of the Franz Programs;
+
+ (7) upon termination of the license, the End-User shall delete or return
+ all copies of the Franz Programs to NASA or the applicable licensor, and
+
+ (8) each End-User License that NASA , (or a distributor or other
+ intermediary in NASA's chain of distribution) grants to the United
+ States government or an agency thereof must be subject to a written
+ agreement that includes a provision that is substantially identical to
+ the following:
+
+ "NASA hereby acknowledges that Apex and its related documentation are
+ 'commercial computer software' provided in accordance with FAR 12.212
+ and DFARS 227.7202 and are, therefore, subject to Contractor's standard
+ licensing terms therefor."
+
+ NASA agrees that it will not remove or permit to be removed the
+ following legend, which is printed on the Franz Programs and
+ documentation:
+
+ "RESTRICTED RIGHTS LEGEND Use, duplication, reproduction, and transfer
+ of this commercial product and accompanying documentation are restricted
+ in accordance with FAR 12.212 and DFARS 227.7202 and by a license
+ agreement.  Contact (name of contact person and address of company)."
+
+ All end-user licenses of Apex shall include provisions that protect and
+ restrict use of Franz Programs, in the same fashion as NASA's
+ Development license for Allegro CL and each such end-user license shall
+ also provide that neither Franz (which may be referred to as NASA's
+ supplier or licensor), nor any supplier or licensor of Franz, shall be
+ liable to the end-user for any general, special, direct, indirect,
+ consequential, incidental, or other damages arising out of the license
+ of Apex.
+
+ With respect to Apex and documentation that are licensed to U.S.
+ government agencies, Licensee will place this Restricted Rights Legend,
+ in addition to the applicable copyright notices, on the labels for media
+ containing software and on the copyright page of the documentation.
+
+ With respect to the foregoing (1)-(8), Franz may be referred to as
+ NASA's supplier or licensor.

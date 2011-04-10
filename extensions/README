@@ -1,0 +1,5 @@
+This directory is for user extensions to Apex.  All Lisp (.lisp) files
+put here will be compiled (if necessary) and loaded whenever Apex is
+started.  They are load *after* system patches.
+
+

@@ -1,0 +1,8 @@
+body {	 margin-left: +15%; margin-right: +15%;
+	 font-family: verdana, arial, sans serif; font-size:12px; line-height:16px }
+
+td { font-family: verdana, arial, sans serif; font-size:12px; line-height:16px }
+code, pre { font-family: "courier new", "courier";font-size:12px; line-height:14px }
+h1 {font-weight:bold; font-family: verdana, arial, sans serif; font-size:14px; line-height:18px}
+h2 {font-weight:bold; font-family: verdana, arial, sans serif; font-size:12px; line-height:18px}
+h3, h4, h5, h6 { margin-left: +5%; font-weight:bold; font-family: verdana, arial, sans serif; font-size:11px; line-height:16px}

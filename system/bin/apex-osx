@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Start Apex within Emacs in OSX
+
+BASE=$PWD
+EMACS=emacs
+
+export BASE
+
+$EMACS -l $BASE/eli/fi-site-init.el -eval "(setq fi:common-lisp-image-name \"$BASE/Apex\")" -l $BASE/start-apex.el 
+
+
+

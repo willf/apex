@@ -1,0 +1,14 @@
+;;;-*- Mode: Lisp; Package: :cl-user -*-
+;;;
+;;; apex/system/loading/sim-engine.xsdf
+;;;
+;;; Copyright:      See apex/LICENSE
+;;; Version:        $Id: sim-engine.xsdf,v 1.1 2006/03/13 17:15:30 will Exp $
+
+(defparameter *apex.sim-engine.files*
+    '(
+      "apex:system;simulation;classes.lisp" 
+      "apex:system;simulation;simulation.lisp"
+      ))
+
+

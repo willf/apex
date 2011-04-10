@@ -1,0 +1,143 @@
+This file: apex/system/utility/type-check.text
+Updated 7/11/04
+
+Documentation for the type checking utility defined in type-check.lisp.
+
+The macro TYPE-CHECK is designed to check the arguments passed to a
+function, macro, or method (actually, it can be used in any context).
+It checks arbitrarily complex types, which may be composed (e.g. "lists
+of lists of either strings or integers").  It is extensible by simply
+defining new predicates (see section below) for the types you want to
+check.
+
+Usage
+-----
+
+  (type-check NAME <ARG1> <ARG2> ...)
+
+where NAME is the name of the construct (e.g. function), and ARGi is a
+clause of the form
+
+  (PARAM TYPE)
+
+where PARAM is the name of a parameter (or any variable you want to
+check) and TYPE is a description of the required type.  This description
+is a symbol for simple types (e.g. int, string), and a list for more
+complex types (e.g. (list int) for list of integers).  Types can be
+composed to any level of complexity.  See the examples below, as well as
+the predefined types, for a clearer picture.
+
+
+Behavior
+--------
+
+The boolean variable *error-on-type-mismatch*, defaulting to T, causes
+the _first_ type mismatch to signal an error.  If NIL, a message is
+printed for _all_ type mismatches.
+
+
+Example
+--------
+
+(defun add-to-dbase (name age address &key lucky-numbers junk)
+  (type-check add-to-dbase
+    (name string)                    
+    (age int)
+    (address (either string (list any))) ; either string or arbitrary list
+    (lucky-numbers (opt (list int)))     ; optional list of integers
+    (junk (opt any)))                    ; optional and of any type
+  ;; ... body goes here ...
+  t
+  )
+
+  CL-USER(73): (setq *error-on-type-mismatch* nil)
+
+  CL-USER(83): (add-to-dbase "Jill" 21 "123 Oak Street")
+  T
+
+  CL-USER(84): (add-to-dbase "Jill" 21 '(123 Oak Street) :lucky-numbers '(2 3))
+  T
+
+  CL-USER(42): (add-to-dbase "Jill" 21 "123 Oak"  :lucky-numbers "foo")
+  Type error in ADD-TO-DBASE:
+    Parameter LUCKY-NUMBERS given bad value foo
+    Expected type (OPT (LIST INT))
+  T
+
+  CL-USER(43): (add-to-dbase 'jill 21.5 '(123 Oak Street) :lucky-numbers '(2 3))
+  Type error in ADD-TO-DBASE:
+    Parameter NAME given bad value JILL
+    Expected type STRING
+  Type error in ADD-TO-DBASE:
+    Parameter AGE given bad value 21.5
+    Expected type INT
+  T
+
+
+Predefined Types
+----------------
+
+First order types:
+
+  string
+  symbol
+  int           - integer
+  nat           - natural number
+  number        - any kind of number
+  bool          - strict boolean (t or nil)
+  function      - any kind of function
+  any           - any type (e.g. the only way to 
+                  describe heterogeneous lists)
+
+Higher order types (types that are functions of types):
+
+  Let A,B,C, etc be types.
+
+  (list A)      - list containing elements of type A
+  (opt A)       - either type A or nil
+  (either A B ...) - either type A or type B or ...
+
+
+Extension
+---------
+
+Let's say you want to support a type FOO.  If FOO is a first-order type,
+define a variable
+
+  (defparameter tc-foo
+    #'(lambda (x) <predicate to test if x is a FOO>))
+
+If FOO is a higher-order type, define a function
+
+  (defun tc-foo (TYPE)
+     #'(lambda (x)
+         <predicate to test if X satisfies type TYPE composed with FOO>))
+
+Note the "tc-" prefix, which is required, but not used in the call to
+type-check.  You can now do:
+
+  (defun my-function (x)
+    (type-check my-function (x foo)))
+
+
+Limitations
+-----------
+
+For checking function types, you can check if the argument is a
+function, but you cannot check the function's domain and codomain.  This
+is a limitation of Lisp itself.
+
+You can't check _all_ parameters before signaling an error (it is
+signaled on the first mismatch if there is one).
+
+
+To Do
+-----
+
+Put this in its own package.  This should obviate the need for the hacky
+"tc-" prefix that's needed.
+
+Support checking of all arguments before signalling an error.
+
+Support continuations (failure, and possibly success).
+

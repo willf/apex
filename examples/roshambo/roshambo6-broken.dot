@@ -1,0 +1,37 @@
+digraph g20751 {
+	graph [ordering=out, root=g20751, peripheries=0, label="\n", rankdir="TB", label="(:and (state #{task-8 (gesture paper)} = terminated) (gestured <?opponent> ?other))"];
+	node [label="\n", shape=ellispe, style=filled, peripheries=2];
+	edge [color=gray, arrowhead=odot];
+	subgraph cluster_3 {
+		graph [label="\n", peripheries=0];
+		measurement_monitor_3 [label="(state task-8 = terminated)\n[1000]", shape=ellipse, style=filled, peripheries=1, color=darkseagreen];
+	}
+	subgraph cluster_4 {
+		graph [label="\n", peripheries=0];
+		atomic_episode_monitor_1 [label="(gestured <?opponent> ?other)\n[500]", shape=ellipse, style=filled, peripheries=1, color=darkseagreen];
+	}
+	subgraph cluster_5 {
+		graph [label="(state task-8)", root="", labelloc=b, style=filled, color="#9FC7E6"];
+		node [shape=box, peripheries=1];
+		//measurement_4 [color="#B5D5FF", label="(state task-8 =pending)\n0"];
+		//measurement_62 [color="#B5D5FF", label="(state task-8 =enabled)\n500"];
+		//measurement_63 [color="#B5D5FF", label="(state task-8 =engaged)\n500"];
+		//measurement_64 [color="#B5D5FF", label="(state task-8 =ongoing)\n500"];
+		measurement_65 [color="#B5D5FF", label="(state task-8 =terminated)\n1000"];
+		//measurement_62 -> measurement_4 [style=invis];
+		//measurement_63 -> measurement_62 [style=invis];
+		//measurement_64 -> measurement_63 [style=invis];
+		//measurement_65 -> measurement_64 [style=invis];
+	}
+	and_monitor_1 [label=":and\n[500 P0.500S]", shape=box, style=filled, peripheries=1, color=darkseagreen];
+	measurement_monitor_3 [label="(state task-8 = terminated)\n[1000]", shape=ellipse, style=filled, peripheries=1, color=darkseagreen];
+	atomic_episode_monitor_1 [label="(gestured <?opponent> ?other)\n[500]", shape=ellipse, style=filled, peripheries=1, color=darkseagreen];
+	g20754 [style=box, shape=plaintext, peripheries=1, color=darkseagreen, label="Output vars\nother=priming\n"];
+	g20756 [style=box, shape=plaintext, peripheries=1, color=darkseagreen, label="Input vars\nopp-name=jack\nmine=paper\nother=priming\nwinning=priming\nwinner=agent-2\nperson1=agent-1\ngesture1=paper\nperson2=agent-2\ngesture2=priming\n"];
+	and_monitor_1 -> measurement_monitor_3;
+	and_monitor_1 -> atomic_episode_monitor_1;
+	atomic_episode_monitor_1 -> g20754 [arrowhead=normal, style=dotted, constraint=true];
+	measurement_monitor_3 -> measurement_65 [arrowhead=none, arrowtail=normal];
+	g20756 -> and_monitor_1 [arrowhead=normal, style=dotted, constraint=false];
+}
+ 

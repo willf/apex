@@ -1,0 +1,82 @@
+(flet ((defp (name)
+	   (unless (find-package name)
+	     (make-package name))
+	 (use-package (find-package name) (find-package :cl-user))))
+  (defp :apex.utility.fp)
+  (defp :apex.utility.patmatch)
+  (defp :apex.utility.pipe)
+  (defp :apex.utility.datetime) 
+  (defp :apex.utility.timeseries)
+  (defp :apex.utility.csv)  
+  (defp :apex.utility.ast)
+  (defp :inet.util.process)
+  (defp :inet.util.tree)
+  (defp :apex.asa.sv)
+  (defp :apex.asa.ae)  
+  (defp :apex.asa.probe)
+  )
+
+(defparameter *apex.intrinsic.files*
+    '("apex:system;utility;fp.lisp"
+      "apex:system;utility;unit-test.lisp"
+      "apex:system;utility;pickle.lisp"
+      "apex:system;utility;menu.lisp"
+      "apex:system;utility;misc.lisp"
+      "apex:system;utility;patmatch.lisp"
+      "apex:system;utility;pipe.lisp"
+      "apex:system;utility;processes.lisp"
+      "apex:system;utility;datetime.lisp"
+      "apex:system;utility;red-black-trees.lisp"
+      "apex:system;utility;assertion-database.lisp"
+      "apex:system;utility;random.lisp"
+      "apex:system;utility;type-check.lisp"
+      "apex:system;utility;timeseries.lisp"
+      "apex:system;utility;dot.lisp"
+      "apex:system;utility;abstract-syntax-tree.lisp"
+      "apex:system;utility;html-utilities.lisp"
+      "apex:system;utility;csv.lisp"
+      "apex:system;foundation;id-mixin.lisp"
+      "apex:system;foundation;attributes-mixin.lisp"
+      "apex:system;foundation;assertion-mixin.lisp"
+      "apex:system;foundation;threads.lisp"
+      "apex:system;foundation;load-support.lisp"
+      "apex:system;foundation;graphical-object.lisp"
+      "apex:system;foundation;license.lisp"
+      "apex:system;foundation;library.lisp"
+      "apex:system;foundation;appob.lisp"
+      "apex:system;foundation;pubsub.lisp"
+      "apex:system;foundation;application.lisp"
+      "apex:system;foundation;hierarchy.lisp"
+      "apex:system;foundation;son-of-pubsub.lisp"
+      "apex:system;foundation;loading.lisp"
+      "apex:system;foundation;trace.lisp"
+      "apex:system;foundation;activity.lisp"
+      "apex:system;foundation;prompt.lisp"
+      "apex:system;foundation;locale.lisp"
+      "apex:system;asa;sv.lisp"
+      "apex:system;asa;atomic-episode.lisp"
+      "apex:system;asa;agent.lisp"
+      "apex:system;asa;probe.lisp"
+      "apex:system;asa;agent.lisp"
+      "apex:system;asa;procdefs.lisp"
+      "apex:system;asa;task.lisp"
+      "apex:system;asa;rat.lisp"
+      "apex:system;asa;cogevents.lisp"
+      "apex:system;asa;monitors.lisp"
+      "apex:system;asa;monitors-measurement.lisp"
+      "apex:system;asa;monitors-timepoint.lisp"
+      "apex:system;asa;monitors-functional.lisp"
+      "apex:system;asa;monitors-estimation.lisp"
+      "apex:system;asa;monitors-simple-episode.lisp"
+      "apex:system;asa;monitors-complex-episode.lisp"
+      "apex:system;asa;monitors-functional.lisp"
+      "apex:system;asa;monitors-to-dot.lisp"
+      "apex:system;asa;indexical-variables.lisp"
+      "apex:system;asa;resource.lisp"
+      "apex:system;asa;primitives.lisp"
+      "apex:system;asa;inspection-support.lisp"
+      "apex:system;asa;agenda-support.lisp"
+      "apex:system;asa;action-sel.lisp"
+      "apex:system;asa;state-variable-histories-to-csv.lisp"
+      "apex:system;utility;monitor-testing-framework.lisp"))
+

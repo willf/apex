@@ -1,0 +1,52 @@
+;;;; -*- Mode: Lisp; Syntax: Common-Lisp -*-
+;;;; Code from Paradigms of AI Programming
+;;;; Copyright (c) 1991 Peter Norvig
+
+(pat-match '(x = (?is ?n numberp)) '(x = 34))
+;;;; -> ((?n . 34))
+
+(pat-match '(x = (?is ?n numberp)) '(x = x))
+;;;; -> NIL
+
+(pat-match '(?x (?or < = >) ?y) '(3 < 4))
+;;;; -> ((?Y . 4) (?X . 3))
+
+(pat-match '(x = (?and (?is ?n numberp) (?is ?n oddp))) '(x = 3))
+;;;; -> ((?N . 3))
+
+(pat-match '(?x /= (?not ?x)) '(3 /= 4))
+;;;; -> ((?X . 3))
+
+(pat-match '(?x > ?y (?if (> ?x ?y))) '(4 > 3))
+;;;; -> ((?Y . 3) (?X . 4))
+
+(pat-match '(a (?* ?x) d) '(a b c d))
+;;;; -> ((?X B C))
+
+(pat-match '(a (?* ?x) (?* ?y) d) '(a b c d))
+;;;; -> ((?Y B C) (?X))
+
+(pat-match '(a (?* ?x) (?* ?y) ?x ?y) '(a b c d (b c) (d)))
+;;;; -> ((?Y D) (?X B C))
+
+(pat-match '(?x ?op ?y is ?z (?if (eql (?op ?x ?y) ?z))) '(3 + 4 is 7))
+;;;; -> ((?Z . 7) (?Y . 4) (?OP . +) (?X . 3))
+
+(pat-match '(?x ?op ?y (?if (?op ?x ?y))) '(3 > 4))
+;;;; -> NIL
+
+(pat-match-abbrev '?x* '(?* ?x))
+;;;; -> (?* ?X)
+
+(pat-match-abbrev '?y* '(?* ?y))
+;;;; -> (?* ?Y)
+
+(setf axyd (expand-pat-match-abbrev '(a ?x* ?y* d)))
+;;;; -> (A (?* ?X) (?* ?Y) D)
+
+(pat-match axyd '(a b c d))
+;;;; -> ((?Y B C) (?X))
+
+(pat-match '(((?* ?x) (?* ?y)) ?x ?y) '((a b c d) (a b) (c d)))
+;;;; -> NIL
+

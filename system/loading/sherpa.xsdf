@@ -1,0 +1,16 @@
+;;;-*- Mode: Lisp; Package: :cl-user -*-
+;;;
+;;; apex/system/loading/sherpa.system
+;;;
+;;; Copyright:      See apex/LICENSE
+;;; Version:        $Id: sherpa.xsdf,v 1.1 2006/03/13 17:15:30 will Exp $
+
+(defparameter *apex.sherpa.files*
+    '(
+      "apex:system;sherpa;eventtypes.lisp" 
+      "apex:system;sherpa;sherpa.lisp" 
+      "apex:system;sherpa;inspection.lisp" 
+      "apex:system;sherpa;acl.lisp"
+      "apex:system;sherpa;pert;pertier.lisp"
+      ))
+

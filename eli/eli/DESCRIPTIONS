@@ -1,0 +1,16 @@
+Patches to the Emacs-Lisp interface are whole-file replacements for
+files you have in your <Allegro directory>/eli/ directory.
+
+The files currently available:
+
+fi-basic-lep.el, fi-basic-lep.elc
+   Hide the *LEP...* buffers from buffer list.
+
+fi-emacs19.el, fi-emacs19.elc
+   Fix fontification of defconstant in fi:common-lisp-mode.
+
+fi-subproc.el, fi-subproc.elc
+   Add `.' to the prompt regexp so prompts can reliably be detected.
+
+fi-lep.el, fi-lep.elc
+   Fix errors during symbol completion due to fontification in emacs buffers.

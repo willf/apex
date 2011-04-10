@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+	"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="1536" height="2048">
+	<image id="atm" x="111" y="211" width="1536" height="2048"
+		xlink:href="fullatmJPG.jpg" transform="matrix(1 0 0 1 -111 -211)"/>
+	<rect id="keypad" x="364" y="1022" width="237" height="322"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-0" x="453" y="1263" width="59" height="55"
+		style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-1" x="377" y="1034" width="61" height="68"
+		transform="translate(407.5 1102) scale(1 0.681373) translate(-407.5 -1102) translate(438 1068) scale(0.972678 1) translate(-438 -1068)"
+		
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-2" x="462" y="1050" width="58" height="52"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-3" x="540" y="1047" width="53" height="55"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-4" x="377" y="1120" width="61" height="54"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-5" x="457" y="1119" width="58" height="51"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-6" x="537" y="1117" width="60" height="55"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-7" x="372" y="1189" width="61" height="58"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-8" x="455" y="1187" width="58" height="58"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="key-9" x="533" y="1187" width="62" height="57"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="ok-key" x="617" y="1189" width="110" height="53"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="correct-key" x="615" y="1115" width="112" height="52"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="no-key" x="618" y="1049" width="109" height="53"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="screen" x="370" y="665" width="377" height="275"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="money-slot" x="984" y="848" width="270" height="25"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+	<rect id="card-slot" x="991" y="1304" width="383" height="242"
+		 style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1;opacity:0"/>
+
+</svg>

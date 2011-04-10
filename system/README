@@ -1,0 +1,11 @@
+This directory contains the source code for the Apex system.  Its
+structure is as follows.
+
+asa/         (Action Selection Architecture)
+bin/         (various scripts -- see its README)
+foundation/  (core components of Apex)
+loading/     (defsystem support)
+sherpa/      (lisp support for Sherpa)
+  pert/      (Pert chart support)
+simulation/  (simulation engine)
+utility      (general utilities)
